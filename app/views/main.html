@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row marketing" ng-controller="MainCtrl">
+  <label for="text">Your Handle goes here: </label>
+  <input type="text" name="handle" value="" ng-model="handle">
+  <h1><a href="http://www.twitter.com/{{ handle }}">www.twitter.com/{{ handle }}</h1>
+    <hr />
+
+    <div class="alert" ng-if="handle.length === 0">
+
+      <p class="alert alert-danger">
+        You need to implement a handle!
+      </p>
+
+    </div>
+
+    <div class="alert" ng-if="handle.length > 0">
+
+      <p class="alert alert-success">
+        Done!
+      </p>
+
+    </div>
+
+</div>
